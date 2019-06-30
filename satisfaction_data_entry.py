@@ -10,12 +10,12 @@ c = conn.cursor()
 c.execute("PRAGMA foreign_keys = ON")
 
 #('p_name', 'm_name', out_rate)
-new_products = []
+new_products = [('Iron Ingot 2', 'foundry', 45), ('Copper Ore', 'miner', 120)]
 if new_products:
 	c.executemany("INSERT INTO products VALUES (?, ?, ?)", new_products)
 
 #('out_name', 'in_name', in_rate)
-new_requirements = []
+new_requirements = [('Iron Ingot 2', 'Iron Ore', 15), ('Iron Ingot 2', 'Copper Ore', 15)]
 if new_requirements:
 	c.executemany("INSERT INTO requires VALUES (?, ?, ?)", new_requirements)
 
