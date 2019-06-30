@@ -54,6 +54,6 @@ def requirements(name, n):
 		power_used += requirements(ing_name, ing_ct)
 	return power_used
 
-run_machines('Steel Ingot', 24)
-run_machines('Steel Ingot Alt 1', 16)
+run_machines('Screw', 8)
+run_machines('Screw 2', 8)
 conn.close()
